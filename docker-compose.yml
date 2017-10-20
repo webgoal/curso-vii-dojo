@@ -1,6 +1,9 @@
-version: '3'
+version: '2'
+volumes:
+  gems:
 services:
   app:
     build: .
     volumes:
       - .:/opt/app
+      - gems:/usr/local/bundle
